@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TesteDev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            João Blog
+        </h1>
+    </div>
+    <div class="about">
+        <div class="card">
+            <h3>
+                Teste de desenvolvimento
+            </h3>
+            <p>
+                Olá, me chamo João e sou um entusiasta da tecnologia, gosto muito do mundo dos sistemas Operacionais e
+                desenvolvimento Web. Atualmente meus estudos estão focados nas tecnolgoias back-end: TS,node.js,Rust e
+                no front: React, TS.
+            </p>
+            <img src="pfp.png"
+                alt="pfp" height="350px" width="400px" >
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-footer">
+
+            <div class="copyright">
+                <p>
+                    © 2023 João Blog - Todos os direitos reservados
+                </p>
+            </div>
+            <div class="form">
+                <h2>Entre em contato</h2>
+                <form action="/" method="post" id="contact-form">
+                    <div class="form-input">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="nome">E-mail:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="nome">Mensagem</label>
+                        <textarea rows="3" name="mensagem" id="mensagem" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var nome = document.getElementById('nome').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var mensagem = document.getElementById('mensagem').value.trim();
+
+            if (nome === '' || email === '' || mensagem === '') {
+                alert('Erro: Preencha todos os campos.');
+            } else {
+                alert('Ok: Formulário enviado com sucesso!');
+            }
+        });
+    </script>
+</body>
+
+</html>
